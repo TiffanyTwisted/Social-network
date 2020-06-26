@@ -1,0 +1,18 @@
+
+.info{
+  
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    grid-area: info;
+    margin:12px;
+  }
+  .info-text{
+    font-family: SF Pro Display;
+    font-size: 18px;
+    line-height: 22px;
+    color: #595959;
+    margin-left:18px;
+    margin-top: 20px;
+  
+  }

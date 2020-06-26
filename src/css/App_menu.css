@@ -1,0 +1,37 @@
+.App-menu{
+    grid-area: m;
+  }
+  
+  .nav{
+    display:flex;
+    height: 70%;
+    width:70%;
+  
+    margin-left:20px;
+    margin-top:20px;
+    flex-direction:column;
+    
+    
+   
+  }
+  .log{
+    text-decoration: none;
+    color:#1d3a5c;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    line-height: 22px;
+    height:25px;
+    width:100px;
+    margin-top:20px;
+    margin-left:180px;
+  
+  }
+  .log:hover{
+    background-color: white;
+    
+  }
+  .nav-icon{
+     width: 15px;
+     height: 15px;
+     padding-right: 6px;
+  }
