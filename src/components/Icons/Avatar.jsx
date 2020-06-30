@@ -2,7 +2,7 @@ import React from 'react';
 import avatar from './../../img/Rick.jpg';
 
 
-const AvatarIcon =()=>{
+const AvatarIcon =(props)=>{
 return(
     <img src={avatar} className="avatarIcon"/>
 )

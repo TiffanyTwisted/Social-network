@@ -1,0 +1,14 @@
+.pannel{
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+.pannel img{
+  cursor: pointer;
+}
+
+
+

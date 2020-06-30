@@ -28,6 +28,7 @@
   }
   .log:hover{
     background-color: white;
+    border-radius: 5px;
     
   }
   .nav-icon{

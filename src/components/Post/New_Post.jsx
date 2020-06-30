@@ -1,18 +1,17 @@
 import React from 'react';
 import Avatar from './../Icons/Avatar';
+import Like from './../Icons/Like';
 import './../../css/Post.css';
 
 
-const newPost =()=>{
+const newPost =(props)=>{
     return(
        <div className="new-post">
         <Avatar/>
         <div className = 'quote'>
-        To live is to risk it all, otherwise you're just an inert chunk of randomly assembled molecules drifting wherever the universe blows you
+        {props.message}
         </div>
-        <div>
-
-        </div>
+        <Like number={props.like}/>
        </div>
     );
 }

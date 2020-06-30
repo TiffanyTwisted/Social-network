@@ -1,33 +1,29 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Navigation from './components/Menu/Navigation';
-import Post from './components/Post/Post';
-import Info from './components/Info';
-import Profile from './components/Profile/Profile';
+import Menu from './components/Menu/Menu';
+import Content from './components/Content';
+import Dialogues from './components/Dialogues/Dialogues';
+import Music from './components/Music/Music';
+import {BrowserRouter,Route} from "react-router-dom";
+import News from './components/News/News';
 
 
-
-
-
-const App = ()=> {
+const App = (props)=> {
+ 
   return (
+    <BrowserRouter>
     <div className="App">
      <Header/>
-     <main className="App-content">
-       <div className="content-view">
-         <Profile/>
-          <Info/>
-          <Post/>
-
-       </div>
-      
-     </main>
-     <div className="App-menu">
-     <Navigation/>
-     </div >
-    
+     <Menu/>
+     <div className='content'>
+       <Route path='/content' render={()=><Content PostData ={props.state.contentPage.PostData}  />}/>
+       <Route path ='/dialogues' render={()=><Dialogues dialogeData={props.state.dialoguesPage.dialogeData} messageData={props.state.dialoguesPage.messageData} />}/>
+       <Route path='/music' component={Music}/>
+       <Route path='/news' component={News}/>
     </div>
+    </div> 
+    </BrowserRouter>
   );
 }
 

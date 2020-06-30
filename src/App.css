@@ -7,15 +7,15 @@
 
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 6fr;
-  height: 720px;
+  height: 1200px;
   background-color: rgba(143, 143, 146, 0.3);
 
   
 }
 
-.App-content{
+.content{
   grid-area: c;
-  height: 1200px;
+  height:100%;
 
 }
 .content-view{
