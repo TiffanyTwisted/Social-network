@@ -5,17 +5,29 @@ import New_Post from './New_Post';
 const Post =(props)=>{
   
   let PostElement = props.PostData.map(el=>(<New_Post message= {el.message} like={el.like}/>))
+  let newPost = React.createRef();
+  let addPost=()=>{
+    let text = newPost.current.value;
+    if (text ===""){alert("Введите сообщение")}
+   props.addPost(text);
+   props.updatePost("");
+  };
+  let updatePost = ()=>{
+    let text = newPost.current.value;
+    props.updatePost(text);
+  };
+
     return(
         <div className="post">
         <div className="post-header">
           <p >Create post</p>
         </div>
         <div  className="create-post">
-          <textarea type="text" placeholder="What is new?"size="50"></textarea>
+          <textarea onChange={updatePost} type="text" ref={newPost} placeholder="What is new?"size="50" value={props.newPostText}></textarea>
         </div>
         <div className="line"></div>
         <div   className="button">
-        <button className="send-button">Post</button>
+        <button className="send-button" onClick={addPost} >Post</button>
         </div>
         {PostElement}
       </div>

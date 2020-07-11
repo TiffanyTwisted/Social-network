@@ -17,7 +17,7 @@ const App = (props)=> {
      <Header/>
      <Menu/>
      <div className='content'>
-       <Route path='/content' render={()=><Content PostData ={props.state.contentPage.PostData}  />}/>
+       <Route path='/content' render={()=><Content PostData ={props.state.contentPage.PostData} newPostText={props.state.contentPage.newPostText}  addPost={props.addPost} updatePost ={props.updatePost}/>}/>
        <Route path ='/dialogues' render={()=><Dialogues dialogeData={props.state.dialoguesPage.dialogeData} messageData={props.state.dialoguesPage.messageData} />}/>
        <Route path='/music' component={Music}/>
        <Route path='/news' component={News}/>

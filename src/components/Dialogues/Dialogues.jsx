@@ -21,9 +21,12 @@ const Message=(props)=>{
 const Dialogues=(props)=>{
  
   let dialogeElement = props.dialogeData.map(el=>(<Dialoge name = {el.name}  id = {el.id}/>))
-
-  
   let messageElement = props.messageData.map(el=>(<Message text={el.text}/>))
+  let NewMessage = React.createRef();
+  let addMessage = ()=>{
+    let text  = NewMessage.current.value;
+    alert(text);
+  }
     return(
       <div className="dialoge" >
         <div className="userListShadow">
@@ -38,10 +41,11 @@ const Dialogues=(props)=>{
            <div className="messageList_header">
            <div className="header_name">User Name
            </div>
-           
-
+      
           </div>
          {messageElement}
+         <textarea ref={NewMessage}></textarea>
+         <button onClick={addMessage}>Add message</button>
           </div>
 
         </div>
