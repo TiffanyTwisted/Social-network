@@ -12,7 +12,7 @@ import App from './App';
  let renderReactTree=(state)=>{
     ReactDOM.render(
       <React.StrictMode>
-        <App state={state} addPost={addPost} updatePost={updatePost} />
+        <App state={state} addPost={addPost} updatePost={updatePost}/>
       </React.StrictMode>,
       document.getElementById('root')
     );}
