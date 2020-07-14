@@ -9,12 +9,13 @@ const Post =(props)=>{
   let addPost=()=>{
     let text = newPost.current.value;
     if (text ===""){alert("Введите сообщение")}
-   props.addPost(text);
-   props.updatePost("");
+   props.dispatch({type:"ADD-POST"});
+   props.dispatch({type:"UPDATE_POST",newText : ""});
+  
   };
   let updatePost = ()=>{
     let text = newPost.current.value;
-    props.updatePost(text);
+    props.dispatch({type:"UPDATE_POST",newText : text});
   };
 
     return(

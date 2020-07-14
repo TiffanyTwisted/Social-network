@@ -12,7 +12,7 @@ const Content= (props)=> {
          <div className="content-view">
            <Profile/>
             <Info/>
-            <Post PostData = {props.PostData} addPost={props.addPost} updatePost={props.updatePost} newPostText={props.newPostText}/>
+            <Post PostData = {props.PostData} dispatch={props.dispatch}  newPostText={props.newPostText}/>
   
          </div>
         
