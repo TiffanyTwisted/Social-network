@@ -1,6 +1,6 @@
 .dialoge{
     display:grid;
-    height: 1000px;
+    height: 535px;
     width: 77%;
     margin-top: 12px;
     margin-left: 12px;
@@ -46,6 +46,7 @@
     background-color: white;
     height: 100%;
     width: 95%;
+    overflow: auto;
    
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -80,8 +81,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #d9d9d998;
 }
 .header_name{
     font-family: "Tahoma";
     font-size: 18px;
+   
+}
+
+.messageFieldShadow{
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   justify-content: center;
+   background-color: #d9d9d998;
+   height: 80px;
+   width: 505px;
+   position: absolute;
+   top:88%;
+
+}
+.messageField{
+    font-size: 18px;
+    margin-top: 25px;
+    margin-right: 6px;
+    border-radius: 5px;
+    border:1px solid #a7bbce; 
+    width: 60%; /* Ширина поля в процентах */
+    height: 25px; /* Высота поля в пикселах */
+    resize: none; 
+    
+}
+.addMessage{
+    width: 25; /* Ширина поля в процентах */
+    height: 25px; 
+    margin-top: 27px;
 }

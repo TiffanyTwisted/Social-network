@@ -51,7 +51,7 @@
     height: 2px;
     width:90%;
     margin-left: 5%;
-    
+    z-index: 20;
   
   }
   .button{

@@ -1,6 +1,8 @@
 import React from 'react';
 import './../../css/App_post.css';
 import New_Post from './New_Post';
+import { addPostcreator, updatePostcreatorNull,updatePostcreator } from '../../redux/state';
+
 
 const Post =(props)=>{
   
@@ -8,14 +10,14 @@ const Post =(props)=>{
   let newPost = React.createRef();
   let addPost=()=>{
     let text = newPost.current.value;
-    if (text ===""){alert("Введите сообщение")}
-   props.dispatch({type:"ADD-POST"});
-   props.dispatch({type:"UPDATE_POST",newText : ""});
+    if (text){
+   props.dispatch(addPostcreator());
+   props.dispatch(updatePostcreatorNull());}
   
   };
   let updatePost = ()=>{
     let text = newPost.current.value;
-    props.dispatch({type:"UPDATE_POST",newText : text});
+    props.dispatch(updatePostcreator(text));
   };
 
     return(
