@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from './../components/Post/Post';
+import PostContainer from './../components/Post/PostContainer';
 import Info from './Info';
 import Profile from './../components/Profile/Profile';
 
@@ -12,7 +12,7 @@ const Content= (props)=> {
          <div className="content-view">
            <Profile/>
             <Info/>
-            <Post PostData = {props.PostData} dispatch={props.dispatch}  newPostText={props.newPostText}/>
+            <PostContainer/>
   
          </div>
         
@@ -20,6 +20,6 @@ const Content= (props)=> {
        
     );
   }
-  
+  //PostData = {props.PostData} dispatch={props.dispatch}  newPostText={props.newPostText}
   
   export default Content;

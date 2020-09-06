@@ -8,16 +8,14 @@ const Post =(props)=>{
   
   let PostElement = props.PostData.map(el=>(<New_Post message= {el.message} like={el.like}/>))
   let newPost = React.createRef();
+
+
   let addPost=()=>{
-    let text = newPost.current.value;
-    if (text){
-   props.dispatch(addPostcreator());
-   props.dispatch(updatePostcreatorNull());}
-  
+    props.addPost();
   };
   let updatePost = ()=>{
     let text = newPost.current.value;
-    props.dispatch(updatePostcreator(text));
+    props.updatePost(text);
   };
 
     return(

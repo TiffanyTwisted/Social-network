@@ -2,32 +2,31 @@ import React from 'react';
 import    './../../css/App_dialogues.css';
 import Message from './Message';
 import Dialoge from './Dialoge';
-import { updateMessageCreator, sendMessageCreator } from '../../redux/dialoge-reducer';
+
 
 
 const Dialogues=(props)=>{
-  let state = props.store.getState().dialoguesPage; // local state 
+  let state = props.dialoguesPage; // local state 
 
 
-  let dialogeElement = state.dialogeData.map(el=>(<Dialoge name = {el.name}  id = {el.id}/>))
-  let messageElement = state.messageData.map(el=>(<Message text={el.text}/>))
-
-
-  let messageRef = React.createRef();
+  let dialogeElement = state.dialogeData.map(el=>(<Dialoge name = {el.name} key={el.id} id = {el.id}/>))
+  let messageElement = state.messageData.map(el=>(<Message text={el.text} key ={el.id}/>))
+  let newMessageBody = state.newMessageBody;
   
- let newMessageBody = state.newMessageBody;
-
-  let onSendMessageClick=()=>{
+   let messageRef = React.createRef();
+  
+  
+ let onSendMessageClick=()=>{
+  
+    props.sendMessage();
+      
+ }
+ let onNewMessageChange=(e)=>{
+   let body = e.target.value;
+    props.updateMessage(body);
    
-       props.store.dispatch(sendMessageCreator());
-  }
-  let onNewMessageChange=(event)=>{
+ }
 
-       let body =  messageRef.current.value;
-       props.store.dispatch(updateMessageCreator(body));
-    
-  }
- 
 
     return(
       
@@ -55,6 +54,7 @@ const Dialogues=(props)=>{
          <button className="addMessage" 
          onClick={onSendMessageClick}>Add message</button>
          </div>
+          
           </div>
 
         </div>

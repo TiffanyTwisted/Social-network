@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
 import Content from './components/Content';
-import Dialogues from './components/Dialogues/Dialogues';
+import DialogeContainer from './components/Dialogues/DialogeContainer';
 import Music from './components/Music/Music';
 import {BrowserRouter,Route} from "react-router-dom";
 import News from './components/News/News';
@@ -17,8 +17,8 @@ const App = (props)=> {
      <Header/>
      <Menu/>
      <div className='content'>
-       <Route path='/content' render={()=><Content PostData ={props.state.contentPage.PostData} newPostText={props.state.contentPage.newPostText}  dispatch={props.dispatch} />}/>
-       <Route path ='/dialogues' render={()=><Dialogues store ={props.store}   />}/>
+       <Route path='/content' render={()=><Content />}/>
+       <Route path ='/dialogues' render={()=><DialogeContainer />}/>
        <Route path='/music' component={Music}/>
        <Route path='/news' component={News}/>
     </div>
@@ -29,3 +29,6 @@ const App = (props)=> {
 
 
 export default App;
+
+// <Route path='/content' render={()=><Content store={props.store} />}/>
+ //      <Route path ='/dialogues' render={()=><Dialogues store ={props.store}   />}/>
