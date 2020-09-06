@@ -1,3 +1,5 @@
+import userReducer from "./user-reducer";
+
 const { createStore, combineReducers } = require("redux");
 const { profileReducer } = require("./profile-reducer");
 const { dialogeReducer } = require("./dialoge-reducer");
@@ -5,7 +7,9 @@ const { dialogeReducer } = require("./dialoge-reducer");
 
 let reducers = combineReducers({
     contentPage:profileReducer,
-    dialoguesPage:dialogeReducer})
+    dialoguesPage:dialogeReducer,
+    usersPage:userReducer
+})
 
 
     

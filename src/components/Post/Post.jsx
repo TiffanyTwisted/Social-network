@@ -1,12 +1,12 @@
 import React from 'react';
 import './../../css/App_post.css';
 import New_Post from './New_Post';
-import { addPostcreator, updatePostcreatorNull,updatePostcreator } from '../../redux/profile-reducer';
+
 
 
 const Post =(props)=>{
   
-  let PostElement = props.PostData.map(el=>(<New_Post message= {el.message} like={el.like}/>))
+  let PostElement = props.PostData.map(el=>(<New_Post message= {el.message} like={el.like} key={el.id}/>))
   let newPost = React.createRef();
 
 

@@ -4,7 +4,7 @@ import avatar from './../../img/Bart.png';
 
 const Bart =()=>{
 return(
-    <img src={avatar} className="avatarIcon"/>
+    <img src={avatar} className="avatarIcon" alt="avatarBart"/>
 )
 }
 

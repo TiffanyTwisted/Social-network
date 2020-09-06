@@ -1,0 +1,46 @@
+.user_shadow{
+    
+    height: 535px;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 12px;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    padding-left: 10%;
+    padding-top: 5%;
+}
+.user_element_shadow {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px dashed grey;
+
+    width:70%;
+    height: 100px;
+    
+
+}
+.user_element{
+    display : grid ;
+    grid-template-areas: 
+    "  name  country "
+     " status city";
+     grid-template-rows: 1fr 1fr ;
+     grid-template-columns: 8fr 2fr;
+    width: 80%;
+    height: 90%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.name{
+      grid-area: name;
+}
+.status{
+    grid-area: status;
+}
+.country{
+    grid-area: country;
+}
+.city{
+    grid-area: city;
+}
